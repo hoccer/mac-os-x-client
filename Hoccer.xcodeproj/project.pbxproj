@@ -1,0 +1,294 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B4A48F1214FE827300192162 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A48F1114FE827200192162 /* Cocoa.framework */; };
+		B4A48F1C14FE827300192162 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4A48F1A14FE827300192162 /* InfoPlist.strings */; };
+		B4A48F1E14FE827300192162 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F1D14FE827300192162 /* main.m */; };
+		B4A48F2214FE827300192162 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B4A48F2014FE827300192162 /* Credits.rtf */; };
+		B4A48F2514FE827300192162 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F2414FE827300192162 /* AppDelegate.m */; };
+		B4A48F2814FE827300192162 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A48F2614FE827300192162 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B4A48F0D14FE827200192162 /* Hoccer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoccer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B4A48F1114FE827200192162 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		B4A48F1414FE827300192162 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B4A48F1514FE827300192162 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B4A48F1614FE827300192162 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B4A48F1914FE827300192162 /* Hoccer-Info.plist */ = {isa = PBXFileReference; path = "Hoccer-Info.plist"; sourceTree = "<group>"; };
+		B4A48F1B14FE827300192162 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B4A48F1D14FE827300192162 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4A48F1F14FE827300192162 /* Hoccer-Prefix.pch */ = {isa = PBXFileReference; path = "Hoccer-Prefix.pch"; sourceTree = "<group>"; };
+		B4A48F2114FE827300192162 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		B4A48F2314FE827300192162 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B4A48F2414FE827300192162 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B4A48F2714FE827300192162 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B4A48F0A14FE827200192162 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A48F1214FE827300192162 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B4A48F0214FE827200192162 = {
+			isa = PBXGroup;
+			children = (
+				B4A48F1714FE827300192162 /* Hoccer */,
+				B4A48F1014FE827200192162 /* Frameworks */,
+				B4A48F0E14FE827200192162 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B4A48F0E14FE827200192162 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F0D14FE827200192162 /* Hoccer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B4A48F1014FE827200192162 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F1114FE827200192162 /* Cocoa.framework */,
+				B4A48F1314FE827300192162 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4A48F1314FE827300192162 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F1414FE827300192162 /* AppKit.framework */,
+				B4A48F1514FE827300192162 /* CoreData.framework */,
+				B4A48F1614FE827300192162 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		B4A48F1714FE827300192162 /* Hoccer */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F2314FE827300192162 /* AppDelegate.h */,
+				B4A48F2414FE827300192162 /* AppDelegate.m */,
+				B4A48F2614FE827300192162 /* MainMenu.xib */,
+				B4A48F1814FE827300192162 /* Supporting Files */,
+			);
+			path = Hoccer;
+			sourceTree = "<group>";
+		};
+		B4A48F1814FE827300192162 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F1914FE827300192162 /* Hoccer-Info.plist */,
+				B4A48F1A14FE827300192162 /* InfoPlist.strings */,
+				B4A48F1D14FE827300192162 /* main.m */,
+				B4A48F1F14FE827300192162 /* Hoccer-Prefix.pch */,
+				B4A48F2014FE827300192162 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B4A48F0C14FE827200192162 /* Hoccer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B4A48F2B14FE827300192162 /* Build configuration list for PBXNativeTarget "Hoccer" */;
+			buildPhases = (
+				B4A48F0914FE827200192162 /* Sources */,
+				B4A48F0A14FE827200192162 /* Frameworks */,
+				B4A48F0B14FE827200192162 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hoccer;
+			productName = Hoccer;
+			productReference = B4A48F0D14FE827200192162 /* Hoccer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B4A48F0414FE827200192162 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Hoccer GmbH";
+			};
+			buildConfigurationList = B4A48F0714FE827200192162 /* Build configuration list for PBXProject "Hoccer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B4A48F0214FE827200192162;
+			productRefGroup = B4A48F0E14FE827200192162 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B4A48F0C14FE827200192162 /* Hoccer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B4A48F0B14FE827200192162 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A48F1C14FE827300192162 /* InfoPlist.strings in Resources */,
+				B4A48F2214FE827300192162 /* Credits.rtf in Resources */,
+				B4A48F2814FE827300192162 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B4A48F0914FE827200192162 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4A48F1E14FE827300192162 /* main.m in Sources */,
+				B4A48F2514FE827300192162 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B4A48F1A14FE827300192162 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4A48F1B14FE827300192162 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B4A48F2014FE827300192162 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4A48F2114FE827300192162 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		B4A48F2614FE827300192162 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B4A48F2714FE827300192162 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B4A48F2914FE827300192162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B4A48F2A14FE827300192162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B4A48F2C14FE827300192162 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hoccer/Hoccer-Prefix.pch";
+				INFOPLIST_FILE = "Hoccer/Hoccer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B4A48F2D14FE827300192162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Hoccer/Hoccer-Prefix.pch";
+				INFOPLIST_FILE = "Hoccer/Hoccer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B4A48F0714FE827200192162 /* Build configuration list for PBXProject "Hoccer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4A48F2914FE827300192162 /* Debug */,
+				B4A48F2A14FE827300192162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B4A48F2B14FE827300192162 /* Build configuration list for PBXNativeTarget "Hoccer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4A48F2C14FE827300192162 /* Debug */,
+				B4A48F2D14FE827300192162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B4A48F0414FE827200192162 /* Project object */;
+}
