@@ -7,28 +7,142 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B44F4B5A1500D53800CD9C69 /* hoccer-icon-22.png in Resources */ = {isa = PBXBuildFile; fileRef = B44F4B591500D53800CD9C69 /* hoccer-icon-22.png */; };
+		B44F4B671500F48100CD9C69 /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = B44F4B661500F48100CD9C69 /* Icon.icns */; };
+		B48C545E15134BC4009E3C6C /* target.png in Resources */ = {isa = PBXBuildFile; fileRef = B48C545D15134BC4009E3C6C /* target.png */; };
+		B48C5462151354E0009E3C6C /* HoccerContentFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B48C5461151354E0009E3C6C /* HoccerContentFactory.m */; };
+		B48C5471151398B6009E3C6C /* swipe-in.png in Resources */ = {isa = PBXBuildFile; fileRef = B48C546F151398B6009E3C6C /* swipe-in.png */; };
+		B48C5472151398B6009E3C6C /* swipe-out.png in Resources */ = {isa = PBXBuildFile; fileRef = B48C5470151398B6009E3C6C /* swipe-out.png */; };
 		B4A48F1214FE827300192162 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A48F1114FE827200192162 /* Cocoa.framework */; };
 		B4A48F1C14FE827300192162 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4A48F1A14FE827300192162 /* InfoPlist.strings */; };
 		B4A48F1E14FE827300192162 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F1D14FE827300192162 /* main.m */; };
 		B4A48F2214FE827300192162 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = B4A48F2014FE827300192162 /* Credits.rtf */; };
 		B4A48F2514FE827300192162 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F2414FE827300192162 /* AppDelegate.m */; };
 		B4A48F2814FE827300192162 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4A48F2614FE827300192162 /* MainMenu.xib */; };
+		B4A48F3014FE82AA00192162 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A48F2F14FE82AA00192162 /* CoreLocation.framework */; };
+		B4A48F3314FE82D300192162 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A48F3114FE82D300192162 /* MapKit.framework */; };
+		B4A48F3414FE82D300192162 /* YAJL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A48F3214FE82D300192162 /* YAJL.framework */; };
+		B4A48F3614FE830E00192162 /* MapKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B4A48F3114FE82D300192162 /* MapKit.framework */; };
+		B4A48F3714FE830E00192162 /* YAJL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B4A48F3214FE82D300192162 /* YAJL.framework */; };
+		B4A48F4E14FE83CF00192162 /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F3C14FE83CF00192162 /* Crypto.m */; };
+		B4A48F4F14FE83CF00192162 /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F3E14FE83CF00192162 /* NSData+CommonCrypto.m */; };
+		B4A48F5014FE83CF00192162 /* PublicKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F4014FE83CF00192162 /* PublicKeyManager.m */; };
+		B4A48F5114FE83CF00192162 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F4214FE83CF00192162 /* RSA.m */; };
+		B4A48F5214FE83CF00192162 /* NSFileManager+FileHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F4514FE83CF00192162 /* NSFileManager+FileHelper.m */; };
+		B4A48F5314FE83CF00192162 /* NSObject+DelegateHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F4714FE83CF00192162 /* NSObject+DelegateHelper.m */; };
+		B4A48F5414FE83CF00192162 /* NSString+Regexp.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F4914FE83CF00192162 /* NSString+Regexp.m */; };
+		B4A48F5514FE83CF00192162 /* NSString+StringWithData.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F4B14FE83CF00192162 /* NSString+StringWithData.m */; };
+		B4A48F5614FE83CF00192162 /* NSString+URLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F4D14FE83CF00192162 /* NSString+URLHelper.m */; };
+		B4A48F7914FE83D800192162 /* HCEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F5A14FE83D800192162 /* HCEnvironment.m */; };
+		B4A48F7A14FE83D800192162 /* HCEnvironmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F5C14FE83D800192162 /* HCEnvironmentManager.m */; };
+		B4A48F7B14FE83D800192162 /* WifiScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F6014FE83D800192162 /* WifiScanner.m */; };
+		B4A48F7C14FE83D800192162 /* HCFileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F6314FE83D800192162 /* HCFileCache.m */; };
+		B4A48F7D14FE83D800192162 /* HCGeoStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F6514FE83D800192162 /* HCGeoStorage.m */; };
+		B4A48F7E14FE83D800192162 /* HCLinccer.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F6814FE83D800192162 /* HCLinccer.m */; };
+		B4A48F7F14FE83D800192162 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F6B14FE83D800192162 /* Base64Transcoder.c */; };
+		B4A48F8014FE83D800192162 /* NSData_Base64Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F6E14FE83D800192162 /* NSData_Base64Extensions.m */; };
+		B4A48F8114FE83D800192162 /* NSDictionary+CSURLParams.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F7014FE83D800192162 /* NSDictionary+CSURLParams.m */; };
+		B4A48F8214FE83D800192162 /* HCAuthenticatedHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F7414FE83D800192162 /* HCAuthenticatedHttpClient.m */; };
+		B4A48F8314FE83D800192162 /* HttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F7614FE83D800192162 /* HttpClient.m */; };
+		B4A48F8414FE83D800192162 /* HttpConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A48F7814FE83D800192162 /* HttpConnection.m */; };
+		B4A48F8614FE844300192162 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A48F8514FE844300192162 /* Security.framework */; };
+		B4D0B58C151245F600F1E5DD /* HoccerPreviewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D0B58B151245F600F1E5DD /* HoccerPreviewObject.m */; };
+		B4D3EEE614FFDA7800B72C11 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D3EEE514FFDA7700B72C11 /* AddressBook.framework */; };
+		B4F775691511019700E81CF4 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F775681511019700E81CF4 /* Quartz.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B4A48F3514FE82FC00192162 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B4A48F3614FE830E00192162 /* MapKit.framework in CopyFiles */,
+				B4A48F3714FE830E00192162 /* YAJL.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		B44F4B591500D53800CD9C69 /* hoccer-icon-22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hoccer-icon-22.png"; sourceTree = "<group>"; };
+		B44F4B661500F48100CD9C69 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		B44F4B681500F48700CD9C69 /* Icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Icon.icns; sourceTree = "<group>"; };
+		B48C545D15134BC4009E3C6C /* target.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = target.png; sourceTree = "<group>"; };
+		B48C5460151354E0009E3C6C /* HoccerContentFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoccerContentFactory.h; sourceTree = "<group>"; };
+		B48C5461151354E0009E3C6C /* HoccerContentFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoccerContentFactory.m; sourceTree = "<group>"; };
+		B48C546315135F62009E3C6C /* HoccerContentFactoryDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HoccerContentFactoryDelegate.h; sourceTree = "<group>"; };
+		B48C546F151398B6009E3C6C /* swipe-in.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe-in.png"; sourceTree = "<group>"; };
+		B48C5470151398B6009E3C6C /* swipe-out.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "swipe-out.png"; sourceTree = "<group>"; };
 		B4A48F0D14FE827200192162 /* Hoccer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hoccer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4A48F1114FE827200192162 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		B4A48F1414FE827300192162 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		B4A48F1514FE827300192162 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B4A48F1614FE827300192162 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B4A48F1914FE827300192162 /* Hoccer-Info.plist */ = {isa = PBXFileReference; path = "Hoccer-Info.plist"; sourceTree = "<group>"; };
+		B4A48F1914FE827300192162 /* Hoccer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Hoccer-Info.plist"; sourceTree = "<group>"; };
 		B4A48F1B14FE827300192162 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B4A48F1D14FE827300192162 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B4A48F1F14FE827300192162 /* Hoccer-Prefix.pch */ = {isa = PBXFileReference; path = "Hoccer-Prefix.pch"; sourceTree = "<group>"; };
+		B4A48F1F14FE827300192162 /* Hoccer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hoccer-Prefix.pch"; sourceTree = "<group>"; };
 		B4A48F2114FE827300192162 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		B4A48F2314FE827300192162 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B4A48F2314FE827300192162 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B4A48F2414FE827300192162 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B4A48F2714FE827300192162 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		B4A48F2F14FE82AA00192162 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B4A48F3114FE82D300192162 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MapKit.framework; sourceTree = "<group>"; };
+		B4A48F3214FE82D300192162 /* YAJL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = YAJL.framework; sourceTree = "<group>"; };
+		B4A48F3B14FE83CF00192162 /* Crypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
+		B4A48F3C14FE83CF00192162 /* Crypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Crypto.m; sourceTree = "<group>"; };
+		B4A48F3D14FE83CF00192162 /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		B4A48F3E14FE83CF00192162 /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		B4A48F3F14FE83CF00192162 /* PublicKeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PublicKeyManager.h; sourceTree = "<group>"; };
+		B4A48F4014FE83CF00192162 /* PublicKeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PublicKeyManager.m; sourceTree = "<group>"; };
+		B4A48F4114FE83CF00192162 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
+		B4A48F4214FE83CF00192162 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
+		B4A48F4414FE83CF00192162 /* NSFileManager+FileHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+FileHelper.h"; sourceTree = "<group>"; };
+		B4A48F4514FE83CF00192162 /* NSFileManager+FileHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+FileHelper.m"; sourceTree = "<group>"; };
+		B4A48F4614FE83CF00192162 /* NSObject+DelegateHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DelegateHelper.h"; sourceTree = "<group>"; };
+		B4A48F4714FE83CF00192162 /* NSObject+DelegateHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DelegateHelper.m"; sourceTree = "<group>"; };
+		B4A48F4814FE83CF00192162 /* NSString+Regexp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Regexp.h"; sourceTree = "<group>"; };
+		B4A48F4914FE83CF00192162 /* NSString+Regexp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Regexp.m"; sourceTree = "<group>"; };
+		B4A48F4A14FE83CF00192162 /* NSString+StringWithData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+StringWithData.h"; sourceTree = "<group>"; };
+		B4A48F4B14FE83CF00192162 /* NSString+StringWithData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+StringWithData.m"; sourceTree = "<group>"; };
+		B4A48F4C14FE83CF00192162 /* NSString+URLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLHelper.h"; sourceTree = "<group>"; };
+		B4A48F4D14FE83CF00192162 /* NSString+URLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLHelper.m"; sourceTree = "<group>"; };
+		B4A48F5914FE83D800192162 /* HCEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEnvironment.h; sourceTree = "<group>"; };
+		B4A48F5A14FE83D800192162 /* HCEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEnvironment.m; sourceTree = "<group>"; };
+		B4A48F5B14FE83D800192162 /* HCEnvironmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEnvironmentManager.h; sourceTree = "<group>"; };
+		B4A48F5C14FE83D800192162 /* HCEnvironmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCEnvironmentManager.m; sourceTree = "<group>"; };
+		B4A48F5D14FE83D800192162 /* HCEnvironmentManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCEnvironmentManagerDelegate.h; sourceTree = "<group>"; };
+		B4A48F5F14FE83D800192162 /* WifiScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiScanner.h; sourceTree = "<group>"; };
+		B4A48F6014FE83D800192162 /* WifiScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiScanner.m; sourceTree = "<group>"; };
+		B4A48F6114FE83D800192162 /* WifiScannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiScannerDelegate.h; sourceTree = "<group>"; };
+		B4A48F6214FE83D800192162 /* HCFileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCFileCache.h; sourceTree = "<group>"; };
+		B4A48F6314FE83D800192162 /* HCFileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCFileCache.m; sourceTree = "<group>"; };
+		B4A48F6414FE83D800192162 /* HCGeoStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGeoStorage.h; sourceTree = "<group>"; };
+		B4A48F6514FE83D800192162 /* HCGeoStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCGeoStorage.m; sourceTree = "<group>"; };
+		B4A48F6614FE83D800192162 /* HCGeoStorageDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCGeoStorageDelegate.h; sourceTree = "<group>"; };
+		B4A48F6714FE83D800192162 /* HCLinccer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCLinccer.h; sourceTree = "<group>"; };
+		B4A48F6814FE83D800192162 /* HCLinccer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCLinccer.m; sourceTree = "<group>"; };
+		B4A48F6914FE83D800192162 /* HCLinccerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCLinccerDelegate.h; sourceTree = "<group>"; };
+		B4A48F6B14FE83D800192162 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
+		B4A48F6C14FE83D800192162 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
+		B4A48F6D14FE83D800192162 /* NSData_Base64Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSData_Base64Extensions.h; sourceTree = "<group>"; };
+		B4A48F6E14FE83D800192162 /* NSData_Base64Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSData_Base64Extensions.m; sourceTree = "<group>"; };
+		B4A48F6F14FE83D800192162 /* NSDictionary+CSURLParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CSURLParams.h"; sourceTree = "<group>"; };
+		B4A48F7014FE83D800192162 /* NSDictionary+CSURLParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CSURLParams.m"; sourceTree = "<group>"; };
+		B4A48F7114FE83D800192162 /* Hoccer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hoccer.h; sourceTree = "<group>"; };
+		B4A48F7314FE83D800192162 /* HCAuthenticatedHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAuthenticatedHttpClient.h; sourceTree = "<group>"; };
+		B4A48F7414FE83D800192162 /* HCAuthenticatedHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAuthenticatedHttpClient.m; sourceTree = "<group>"; };
+		B4A48F7514FE83D800192162 /* HttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpClient.h; sourceTree = "<group>"; };
+		B4A48F7614FE83D800192162 /* HttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpClient.m; sourceTree = "<group>"; };
+		B4A48F7714FE83D800192162 /* HttpConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpConnection.h; sourceTree = "<group>"; };
+		B4A48F7814FE83D800192162 /* HttpConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpConnection.m; sourceTree = "<group>"; };
+		B4A48F8514FE844300192162 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B4D0B58A151245F600F1E5DD /* HoccerPreviewObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoccerPreviewObject.h; sourceTree = "<group>"; };
+		B4D0B58B151245F600F1E5DD /* HoccerPreviewObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoccerPreviewObject.m; sourceTree = "<group>"; };
+		B4D3EEE514FFDA7700B72C11 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		B4F775681511019700E81CF4 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +150,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4D3EEE614FFDA7800B72C11 /* AddressBook.framework in Frameworks */,
+				B4F775691511019700E81CF4 /* Quartz.framework in Frameworks */,
+				B4A48F8614FE844300192162 /* Security.framework in Frameworks */,
+				B4A48F3014FE82AA00192162 /* CoreLocation.framework in Frameworks */,
 				B4A48F1214FE827300192162 /* Cocoa.framework in Frameworks */,
+				B4A48F3314FE82D300192162 /* MapKit.framework in Frameworks */,
+				B4A48F3414FE82D300192162 /* YAJL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +166,10 @@
 		B4A48F0214FE827200192162 = {
 			isa = PBXGroup;
 			children = (
+				B4F775681511019700E81CF4 /* Quartz.framework */,
+				B44F4B681500F48700CD9C69 /* Icon.icns */,
 				B4A48F1714FE827300192162 /* Hoccer */,
+				B4A48F3814FE836700192162 /* Libs */,
 				B4A48F1014FE827200192162 /* Frameworks */,
 				B4A48F0E14FE827200192162 /* Products */,
 			);
@@ -63,6 +186,10 @@
 		B4A48F1014FE827200192162 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4D3EEE514FFDA7700B72C11 /* AddressBook.framework */,
+				B4A48F8514FE844300192162 /* Security.framework */,
+				B4A48F2F14FE82AA00192162 /* CoreLocation.framework */,
+				B4A48F2E14FE828400192162 /* Local Frameworks */,
 				B4A48F1114FE827200192162 /* Cocoa.framework */,
 				B4A48F1314FE827300192162 /* Other Frameworks */,
 			);
@@ -82,8 +209,18 @@
 		B4A48F1714FE827300192162 /* Hoccer */ = {
 			isa = PBXGroup;
 			children = (
+				B48C545D15134BC4009E3C6C /* target.png */,
+				B48C546F151398B6009E3C6C /* swipe-in.png */,
+				B48C5470151398B6009E3C6C /* swipe-out.png */,
+				B44F4B661500F48100CD9C69 /* Icon.icns */,
+				B44F4B591500D53800CD9C69 /* hoccer-icon-22.png */,
 				B4A48F2314FE827300192162 /* AppDelegate.h */,
 				B4A48F2414FE827300192162 /* AppDelegate.m */,
+				B4D0B58A151245F600F1E5DD /* HoccerPreviewObject.h */,
+				B4D0B58B151245F600F1E5DD /* HoccerPreviewObject.m */,
+				B48C5460151354E0009E3C6C /* HoccerContentFactory.h */,
+				B48C5461151354E0009E3C6C /* HoccerContentFactory.m */,
+				B48C546315135F62009E3C6C /* HoccerContentFactoryDelegate.h */,
 				B4A48F2614FE827300192162 /* MainMenu.xib */,
 				B4A48F1814FE827300192162 /* Supporting Files */,
 			);
@@ -102,6 +239,134 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B4A48F2E14FE828400192162 /* Local Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F3114FE82D300192162 /* MapKit.framework */,
+				B4A48F3214FE82D300192162 /* YAJL.framework */,
+			);
+			name = "Local Frameworks";
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		B4A48F3814FE836700192162 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F3914FE83BE00192162 /* Hoccer */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		B4A48F3914FE83BE00192162 /* Hoccer */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F5714FE83D800192162 /* HoccerClient */,
+				B4A48F3A14FE83CF00192162 /* Crypto */,
+				B4A48F4314FE83CF00192162 /* Helper */,
+			);
+			path = Hoccer;
+			sourceTree = "<group>";
+		};
+		B4A48F3A14FE83CF00192162 /* Crypto */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F3B14FE83CF00192162 /* Crypto.h */,
+				B4A48F3C14FE83CF00192162 /* Crypto.m */,
+				B4A48F3D14FE83CF00192162 /* NSData+CommonCrypto.h */,
+				B4A48F3E14FE83CF00192162 /* NSData+CommonCrypto.m */,
+				B4A48F3F14FE83CF00192162 /* PublicKeyManager.h */,
+				B4A48F4014FE83CF00192162 /* PublicKeyManager.m */,
+				B4A48F4114FE83CF00192162 /* RSA.h */,
+				B4A48F4214FE83CF00192162 /* RSA.m */,
+			);
+			path = Crypto;
+			sourceTree = "<group>";
+		};
+		B4A48F4314FE83CF00192162 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F4414FE83CF00192162 /* NSFileManager+FileHelper.h */,
+				B4A48F4514FE83CF00192162 /* NSFileManager+FileHelper.m */,
+				B4A48F4614FE83CF00192162 /* NSObject+DelegateHelper.h */,
+				B4A48F4714FE83CF00192162 /* NSObject+DelegateHelper.m */,
+				B4A48F4814FE83CF00192162 /* NSString+Regexp.h */,
+				B4A48F4914FE83CF00192162 /* NSString+Regexp.m */,
+				B4A48F4A14FE83CF00192162 /* NSString+StringWithData.h */,
+				B4A48F4B14FE83CF00192162 /* NSString+StringWithData.m */,
+				B4A48F4C14FE83CF00192162 /* NSString+URLHelper.h */,
+				B4A48F4D14FE83CF00192162 /* NSString+URLHelper.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B4A48F5714FE83D800192162 /* HoccerClient */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F5814FE83D800192162 /* EnvironmentController */,
+				B4A48F6214FE83D800192162 /* HCFileCache.h */,
+				B4A48F6314FE83D800192162 /* HCFileCache.m */,
+				B4A48F6414FE83D800192162 /* HCGeoStorage.h */,
+				B4A48F6514FE83D800192162 /* HCGeoStorage.m */,
+				B4A48F6614FE83D800192162 /* HCGeoStorageDelegate.h */,
+				B4A48F6714FE83D800192162 /* HCLinccer.h */,
+				B4A48F6814FE83D800192162 /* HCLinccer.m */,
+				B4A48F6914FE83D800192162 /* HCLinccerDelegate.h */,
+				B4A48F6A14FE83D800192162 /* Helper */,
+				B4A48F7114FE83D800192162 /* Hoccer.h */,
+				B4A48F7214FE83D800192162 /* HttpClient */,
+			);
+			path = HoccerClient;
+			sourceTree = "<group>";
+		};
+		B4A48F5814FE83D800192162 /* EnvironmentController */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F5914FE83D800192162 /* HCEnvironment.h */,
+				B4A48F5A14FE83D800192162 /* HCEnvironment.m */,
+				B4A48F5B14FE83D800192162 /* HCEnvironmentManager.h */,
+				B4A48F5C14FE83D800192162 /* HCEnvironmentManager.m */,
+				B4A48F5D14FE83D800192162 /* HCEnvironmentManagerDelegate.h */,
+				B4A48F5E14FE83D800192162 /* Wifi */,
+			);
+			path = EnvironmentController;
+			sourceTree = "<group>";
+		};
+		B4A48F5E14FE83D800192162 /* Wifi */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F5F14FE83D800192162 /* WifiScanner.h */,
+				B4A48F6014FE83D800192162 /* WifiScanner.m */,
+				B4A48F6114FE83D800192162 /* WifiScannerDelegate.h */,
+			);
+			path = Wifi;
+			sourceTree = "<group>";
+		};
+		B4A48F6A14FE83D800192162 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F6B14FE83D800192162 /* Base64Transcoder.c */,
+				B4A48F6C14FE83D800192162 /* Base64Transcoder.h */,
+				B4A48F6D14FE83D800192162 /* NSData_Base64Extensions.h */,
+				B4A48F6E14FE83D800192162 /* NSData_Base64Extensions.m */,
+				B4A48F6F14FE83D800192162 /* NSDictionary+CSURLParams.h */,
+				B4A48F7014FE83D800192162 /* NSDictionary+CSURLParams.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		B4A48F7214FE83D800192162 /* HttpClient */ = {
+			isa = PBXGroup;
+			children = (
+				B4A48F7314FE83D800192162 /* HCAuthenticatedHttpClient.h */,
+				B4A48F7414FE83D800192162 /* HCAuthenticatedHttpClient.m */,
+				B4A48F7514FE83D800192162 /* HttpClient.h */,
+				B4A48F7614FE83D800192162 /* HttpClient.m */,
+				B4A48F7714FE83D800192162 /* HttpConnection.h */,
+				B4A48F7814FE83D800192162 /* HttpConnection.m */,
+			);
+			path = HttpClient;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,6 +377,7 @@
 				B4A48F0914FE827200192162 /* Sources */,
 				B4A48F0A14FE827200192162 /* Frameworks */,
 				B4A48F0B14FE827200192162 /* Resources */,
+				B4A48F3514FE82FC00192162 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -128,7 +394,7 @@
 		B4A48F0414FE827200192162 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Hoccer GmbH";
 			};
 			buildConfigurationList = B4A48F0714FE827200192162 /* Build configuration list for PBXProject "Hoccer" */;
@@ -156,6 +422,11 @@
 				B4A48F1C14FE827300192162 /* InfoPlist.strings in Resources */,
 				B4A48F2214FE827300192162 /* Credits.rtf in Resources */,
 				B4A48F2814FE827300192162 /* MainMenu.xib in Resources */,
+				B44F4B5A1500D53800CD9C69 /* hoccer-icon-22.png in Resources */,
+				B44F4B671500F48100CD9C69 /* Icon.icns in Resources */,
+				B48C545E15134BC4009E3C6C /* target.png in Resources */,
+				B48C5471151398B6009E3C6C /* swipe-in.png in Resources */,
+				B48C5472151398B6009E3C6C /* swipe-out.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +439,29 @@
 			files = (
 				B4A48F1E14FE827300192162 /* main.m in Sources */,
 				B4A48F2514FE827300192162 /* AppDelegate.m in Sources */,
+				B4A48F4E14FE83CF00192162 /* Crypto.m in Sources */,
+				B4A48F4F14FE83CF00192162 /* NSData+CommonCrypto.m in Sources */,
+				B4A48F5014FE83CF00192162 /* PublicKeyManager.m in Sources */,
+				B4A48F5114FE83CF00192162 /* RSA.m in Sources */,
+				B4A48F5214FE83CF00192162 /* NSFileManager+FileHelper.m in Sources */,
+				B4A48F5314FE83CF00192162 /* NSObject+DelegateHelper.m in Sources */,
+				B4A48F5414FE83CF00192162 /* NSString+Regexp.m in Sources */,
+				B4A48F5514FE83CF00192162 /* NSString+StringWithData.m in Sources */,
+				B4A48F5614FE83CF00192162 /* NSString+URLHelper.m in Sources */,
+				B4A48F7914FE83D800192162 /* HCEnvironment.m in Sources */,
+				B4A48F7A14FE83D800192162 /* HCEnvironmentManager.m in Sources */,
+				B4A48F7B14FE83D800192162 /* WifiScanner.m in Sources */,
+				B4A48F7C14FE83D800192162 /* HCFileCache.m in Sources */,
+				B4A48F7D14FE83D800192162 /* HCGeoStorage.m in Sources */,
+				B4A48F7E14FE83D800192162 /* HCLinccer.m in Sources */,
+				B4A48F7F14FE83D800192162 /* Base64Transcoder.c in Sources */,
+				B4A48F8014FE83D800192162 /* NSData_Base64Extensions.m in Sources */,
+				B4A48F8114FE83D800192162 /* NSDictionary+CSURLParams.m in Sources */,
+				B4A48F8214FE83D800192162 /* HCAuthenticatedHttpClient.m in Sources */,
+				B4A48F8314FE83D800192162 /* HttpClient.m in Sources */,
+				B4A48F8414FE83D800192162 /* HttpConnection.m in Sources */,
+				B4D0B58C151245F600F1E5DD /* HoccerPreviewObject.m in Sources */,
+				B48C5462151354E0009E3C6C /* HoccerContentFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,9 +543,21 @@
 		B4A48F2C14FE827300192162 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hoccer/Hoccer-Prefix.pch";
 				INFOPLIST_FILE = "Hoccer/Hoccer-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -260,9 +566,21 @@
 		B4A48F2D14FE827300192162 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Hoccer/Hoccer-Prefix.pch";
 				INFOPLIST_FILE = "Hoccer/Hoccer-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -287,6 +605,7 @@
 				B4A48F2D14FE827300192162 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

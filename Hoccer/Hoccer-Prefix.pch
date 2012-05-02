@@ -5,3 +5,10 @@
 #ifdef __OBJC__
     #import <Cocoa/Cocoa.h>
 #endif
+
+#define USES_SANDBOX YES
+
+// Production API Keys
+
+#define API_KEY @"b3b03410159c012e7b5a00163e001ab0"
+#define SECRET  @"ROOCiND4FPqDDwP1taRmdyBejEs="
