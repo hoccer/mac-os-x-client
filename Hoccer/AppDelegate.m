@@ -14,7 +14,6 @@
 
 @implementation AppDelegate
 
-@synthesize window = _window;
 @synthesize sendingDictionary;
 
 - (void)dealloc
@@ -104,7 +103,12 @@
             ABAddressBook *tempBook = [ABAddressBook addressBook];
             ABPerson* person = [[ABPerson alloc] initWithVCardRepresentation:[[receivedFile objectForKey:@"content"] dataUsingEncoding:NSUTF8StringEncoding]];
             [tempBook addRecord:person];
-            [tempBook save];
+            if ([tempBook save]){
+                NSAlert *savedAlert = [NSAlert alertWithMessageText:@"The contact was saved to your address book" defaultButton:@"OK" alternateButton:nil otherButton:nil informativeTextWithFormat:@" "];
+                [savedAlert setAlertStyle:NSInformationalAlertStyle];
+                [savedAlert runModal];
+            }
+            
         }
         else if ([receivedFile objectForKey:@"uri"]){
             [[HoccerContentFactory sharedContentFactory] receiveFile:[receivedFile objectForKey:@"uri"]]; 

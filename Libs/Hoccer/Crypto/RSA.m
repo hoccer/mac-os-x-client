@@ -10,8 +10,6 @@
 #import "RSA.h"
 #import "NSData_Base64Extensions.h"
 
-
-
 @implementation RSA
 
 const size_t BUFFER_SIZE = 64;
@@ -31,6 +29,7 @@ static RSA *instance;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         instance = [[RSA alloc] init];
+        [instance cleanKeyChain];
         if ([instance getPrivateKeyRef] == nil || [instance getPublicKeyRef] == nil) {
             NSLog(@"There are no keys! PANIC!");
             [instance generateKeyPairKeys];
@@ -46,8 +45,11 @@ static RSA *instance;
 {
     self = [super init];
     if (self) {
-        privateTag = @"com.hoccer.client.publickey";
-        publicTag = @"com.hoccer.client.privatekey";
+        //privateTag = [[NSData alloc] initWithBytes:privateKeyIdentifier length:sizeof(privateKeyIdentifier)];
+        //publicTag = [[NSData alloc] initWithBytes:publicKeyIdentifier length:sizeof(publicKeyIdentifier)];
+        
+        applicationTag = (CFDataRef)[@"com.hoccer.client.key" dataUsingEncoding:NSUTF8StringEncoding];
+
     }
 
     return self;
@@ -80,25 +82,35 @@ static RSA *instance;
 - (void)generateKeyPairKeys
 {
     NSLog(@"Generating Keys");
+    
+    
     OSStatus status = noErr;	
-    NSMutableDictionary *privateKeyAttr = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *publicKeyAttr = [[NSMutableDictionary alloc] init];
-    NSMutableDictionary *keyPairAttr = [[NSMutableDictionary alloc] init];
+    //NSMutableDictionary *privateKeyAttr = [[NSMutableDictionary alloc] init];
+    //NSMutableDictionary *publicKeyAttr = [[NSMutableDictionary alloc] init];
+    //NSMutableDictionary *keyPairAttr = [[NSMutableDictionary alloc] init];
 	
     publicKey = NULL;
     privateKey = NULL;
-	
-    [privateKeyAttr setObject:[NSNumber numberWithBool:YES] forKey:(id)kSecAttrIsPermanent];
-    [privateKeyAttr setObject:privateTag forKey:(id)kSecAttrApplicationTag];
+	int bits = 1024;
     
-    [publicKeyAttr setObject:[NSNumber numberWithBool:YES] forKey:(id)kSecAttrIsPermanent];
-	[publicKeyAttr setObject:publicTag forKey:(id)kSecAttrApplicationTag];
+    CFMutableDictionaryRef keyPairAttr = CFDictionaryCreateMutable(kCFAllocatorDefault, 3, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+    CFDictionaryAddValue(keyPairAttr, kSecAttrKeyType, kSecAttrKeyTypeRSA);
+    CFDictionaryAddValue(keyPairAttr, kSecAttrKeySizeInBits, CFNumberCreate( kCFAllocatorDefault, kCFNumberIntType, &bits));
+    CFDictionaryAddValue(keyPairAttr, kSecAttrIsPermanent, kCFBooleanTrue);
+    CFDictionaryAddValue(keyPairAttr, kSecAttrApplicationTag, applicationTag);
+
     
-    [keyPairAttr setObject:(id)kSecAttrKeyTypeRSA forKey:(id)kSecAttrKeyType];
-    [keyPairAttr setObject:[NSNumber numberWithInt:1024] forKey:(id)kSecAttrKeySizeInBits];
+    //[privateKeyAttr setObject:[NSNumber numberWithBool:YES] forKey:(id)kSecAttrIsPermanent];
+    //[privateKeyAttr setObject:privateTag forKey:(id)kSecAttrApplicationTag];
     
-    [keyPairAttr setObject:privateKeyAttr forKey:(id)privateKeyAttr];
-	[keyPairAttr setObject:publicKeyAttr forKey:(id)publicKeyAttr];
+    //[publicKeyAttr setObject:[NSNumber numberWithBool:YES] forKey:(id)kSecAttrIsPermanent];
+	//[publicKeyAttr setObject:publicTag forKey:(id)kSecAttrApplicationTag];
+    
+    //[keyPairAttr setObject:(id)kSecAttrKeyTypeRSA forKey:(id)kSecAttrKeyType];
+    //[keyPairAttr setObject:[NSNumber numberWithInt:1024] forKey:(id)kSecAttrKeySizeInBits];
+    
+    //[keyPairAttr setObject:privateQuery forKey:(id)privateKeyAttr];
+	//[keyPairAttr setObject:publicQuery forKey:(id)publicKeyAttr];
 	
     status = SecKeyGeneratePair((CFDictionaryRef)keyPairAttr, &publicKey, &privateKey);
     
@@ -108,9 +120,9 @@ static RSA *instance;
         NSLog(@"New key");
     }
     
-    [privateKeyAttr release];
-    [publicKeyAttr release];
-    [keyPairAttr release];
+    //[privateKeyAttr release];
+    //[publicKeyAttr release];
+    //[keyPairAttr release];
 }
 
 - (void)testEncryption {
@@ -248,7 +260,8 @@ static RSA *instance;
 	
     if(publicKey == NULL) {
         NSMutableDictionary * queryPublicKey = [[NSMutableDictionary alloc] init];
-				
+        
+        /*
         // Set the public key query dictionary.
         [queryPublicKey setObject:(id)kSecClassKey forKey:(id)kSecClass];
         [queryPublicKey setObject:publicTag forKey:(id)kSecAttrApplicationTag];
@@ -257,7 +270,17 @@ static RSA *instance;
 		
 		// Get the key.
         resultCode = SecItemCopyMatching((CFDictionaryRef)queryPublicKey, (CFTypeRef *)&publicKeyReference);
-		
+		*/
+        
+        CFMutableDictionaryRef query = CFDictionaryCreateMutable(kCFAllocatorDefault, 3, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+        CFDictionaryAddValue(query, kSecReturnRef, kCFBooleanTrue);
+        CFDictionaryAddValue(query, kSecAttrKeyType, kSecAttrKeyTypeRSA);
+        //CFDictionaryAddValue(query, kSecAttrApplicationTag, publicTag);
+        CFDictionaryAddValue(query, kSecClass, kSecClassKey);
+        
+        // get search results
+        resultCode = SecItemCopyMatching(query, (CFTypeRef*)&publicKeyReference);
+        
         if(resultCode != noErr)
         {
             publicKeyReference = NULL;
@@ -276,7 +299,7 @@ static RSA *instance;
     SecCertificateRef publicKeyCeritificate = NULL;
 	
     NSMutableDictionary * queryPublicKey = [[NSMutableDictionary alloc] init];
-    
+    /*
     // Set the public key query dictionary.
     [queryPublicKey setObject:(id)kSecClassCertificate forKey:(id)kSecClass];
     [queryPublicKey setObject:publicTag forKey:(id)kSecAttrApplicationTag];
@@ -286,7 +309,16 @@ static RSA *instance;
 	// Get the key.
     resultCode = SecItemCopyMatching((CFDictionaryRef)queryPublicKey, (CFTypeRef *)&publicKeyCeritificate);
     NSLog(@"getCertificate: result code: %d", (int)resultCode);
-	
+	*/
+    CFMutableDictionaryRef query = CFDictionaryCreateMutable(kCFAllocatorDefault, 3, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+    CFDictionaryAddValue(query, kSecReturnRef, kCFBooleanTrue);
+    CFDictionaryAddValue(query, kSecAttrKeyType, kSecAttrKeyTypeRSA);
+    CFDictionaryAddValue(query, kSecAttrApplicationTag, applicationTag);
+    CFDictionaryAddValue(query, kSecClass, kSecClassKey);
+    
+    // get search results
+    resultCode = SecItemCopyMatching(query, (CFTypeRef*)&publicKeyCeritificate);
+    
     if(resultCode != noErr)
     {
         publicKeyCeritificate = NULL;
@@ -301,6 +333,7 @@ static RSA *instance;
     SecKeyRef privateKeyReference = NULL;
 	
     if(privateKey == NULL) {
+        /*
         NSMutableDictionary * queryPrivateKey = [[NSMutableDictionary alloc] init];
 
         // Set the private key query dictionary.
@@ -311,13 +344,22 @@ static RSA *instance;
 		
         // Get the key.
         resultCode = SecItemCopyMatching((CFDictionaryRef)queryPrivateKey, (CFTypeRef *)&privateKeyReference);
-		
+		*/
+        CFMutableDictionaryRef query = CFDictionaryCreateMutable(kCFAllocatorDefault, 3, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+        CFDictionaryAddValue(query, kSecReturnRef, kCFBooleanTrue);
+        CFDictionaryAddValue(query, kSecAttrKeyType, kSecAttrKeyTypeRSA);
+        CFDictionaryAddValue(query, kSecAttrApplicationTag, applicationTag);
+        CFDictionaryAddValue(query, kSecClass, kSecClassKey);
+        
+        // get search results
+        resultCode = SecItemCopyMatching(query, (CFTypeRef*)&privateKeyReference);
+        
         if(resultCode != noErr)
         {
             privateKeyReference = NULL;
         }
 		
-        [queryPrivateKey release];
+        //[queryPrivateKey release];
         privateKey = privateKeyReference;
     }
     
@@ -329,21 +371,29 @@ static RSA *instance;
 	OSStatus sanityCheck = noErr;
 	NSData * publicKeyBits = nil;
 	
-	NSMutableDictionary * queryPublicKey = [[NSMutableDictionary alloc] init];
-
+    /*
 	[queryPublicKey setObject:(id)kSecClassKey forKey:(id)kSecClass];
 	[queryPublicKey setObject:publicTag forKey:(id)kSecAttrApplicationTag];
 	[queryPublicKey setObject:(id)kSecAttrKeyTypeRSA forKey:(id)kSecAttrKeyType];
 	[queryPublicKey setObject:[NSNumber numberWithBool:YES] forKey:(id)kSecReturnData];
     
 	sanityCheck = SecItemCopyMatching((CFDictionaryRef)queryPublicKey, (CFTypeRef *)&publicKeyBits);
+    */
+    
+    CFMutableDictionaryRef query = CFDictionaryCreateMutable(kCFAllocatorDefault, 3, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+    CFDictionaryAddValue(query, kSecClass, kSecClassKey);
+    CFDictionaryAddValue(query, kSecReturnData, kCFBooleanTrue);
+    CFDictionaryAddValue(query, kSecAttrKeyClass, kSecAttrKeyClassPublic);
+    CFDictionaryAddValue(query, kSecAttrApplicationTag, applicationTag);
+    
+    // get search results
+    sanityCheck = SecItemCopyMatching(query, (CFTypeRef *)publicKeyBits);
     
 	if (sanityCheck != noErr)
 	{
 		publicKeyBits = nil;
 	}
     
-	[queryPublicKey release];
 	
 	return publicKeyBits;
 }
@@ -353,13 +403,23 @@ static RSA *instance;
 	NSData * privateKeyBits = nil;
 	
 	NSMutableDictionary * queryPrivateKey = [[NSMutableDictionary alloc] init];
-    
+    /*
 	[queryPrivateKey setObject:(id)kSecClassKey forKey:(id)kSecClass];
 	[queryPrivateKey setObject:privateTag forKey:(id)kSecAttrApplicationTag];
 	[queryPrivateKey setObject:(id)kSecAttrKeyTypeRSA forKey:(id)kSecAttrKeyType];
 	[queryPrivateKey setObject:[NSNumber numberWithBool:YES] forKey:(id)kSecReturnData];
     
 	sanityCheck = SecItemCopyMatching((CFDictionaryRef)queryPrivateKey, (CFTypeRef *)&privateKeyBits);
+    */
+    
+    CFMutableDictionaryRef query = CFDictionaryCreateMutable(kCFAllocatorDefault, 3, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+    CFDictionaryAddValue(query, kSecReturnData, kCFBooleanTrue);
+    CFDictionaryAddValue(query, kSecAttrKeyType, kSecAttrKeyTypeRSA);
+    CFDictionaryAddValue(query, kSecAttrApplicationTag, applicationTag);
+    CFDictionaryAddValue(query, kSecClass, kSecClassKey);
+    
+    // get search results
+    sanityCheck = SecItemCopyMatching(query, (CFTypeRef*)&privateKeyBits);
     
 	if (sanityCheck != noErr)
 	{

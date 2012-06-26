@@ -9,7 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <Quartz/Quartz.h>
 
-@interface HoccerPreviewObject : NSObject <QLPreviewItem>
+@interface HoccerPreviewObject : NSObject <QLPreviewItem> {
+    NSString *filePath;
+    NSDate *timeTag;
+}
    
 @property (nonatomic, strong) NSString *filePath;
 @property (nonatomic, strong) NSDate *timeTag;

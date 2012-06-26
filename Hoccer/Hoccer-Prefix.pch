@@ -6,7 +6,7 @@
     #import <Cocoa/Cocoa.h>
 #endif
 
-#define USES_SANDBOX YES
+#define USES_SANDBOX NO
 
 // Production API Keys
 

@@ -48,6 +48,7 @@
 		B4A48F8614FE844300192162 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4A48F8514FE844300192162 /* Security.framework */; };
 		B4D0B58C151245F600F1E5DD /* HoccerPreviewObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B4D0B58B151245F600F1E5DD /* HoccerPreviewObject.m */; };
 		B4D3EEE614FFDA7800B72C11 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4D3EEE514FFDA7700B72C11 /* AddressBook.framework */; };
+		B4EABD84156E82D1009D892B /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B4EABD82156E7DBE009D892B /* NSData+Base64.m */; };
 		B4F775691511019700E81CF4 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4F775681511019700E81CF4 /* Quartz.framework */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +143,8 @@
 		B4D0B58A151245F600F1E5DD /* HoccerPreviewObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HoccerPreviewObject.h; sourceTree = "<group>"; };
 		B4D0B58B151245F600F1E5DD /* HoccerPreviewObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HoccerPreviewObject.m; sourceTree = "<group>"; };
 		B4D3EEE514FFDA7700B72C11 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		B4EABD81156E7DBE009D892B /* NSData+Base64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		B4EABD82156E7DBE009D892B /* NSData+Base64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		B4F775681511019700E81CF4 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -346,6 +349,8 @@
 			children = (
 				B4A48F6B14FE83D800192162 /* Base64Transcoder.c */,
 				B4A48F6C14FE83D800192162 /* Base64Transcoder.h */,
+				B4EABD81156E7DBE009D892B /* NSData+Base64.h */,
+				B4EABD82156E7DBE009D892B /* NSData+Base64.m */,
 				B4A48F6D14FE83D800192162 /* NSData_Base64Extensions.h */,
 				B4A48F6E14FE83D800192162 /* NSData_Base64Extensions.m */,
 				B4A48F6F14FE83D800192162 /* NSDictionary+CSURLParams.h */,
@@ -462,6 +467,7 @@
 				B4A48F8414FE83D800192162 /* HttpConnection.m in Sources */,
 				B4D0B58C151245F600F1E5DD /* HoccerPreviewObject.m in Sources */,
 				B48C5462151354E0009E3C6C /* HoccerContentFactory.m in Sources */,
+				B4EABD84156E82D1009D892B /* NSData+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +549,7 @@
 		B4A48F2C14FE827300192162 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",
@@ -566,6 +573,7 @@
 		B4A48F2D14FE827300192162 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Frameworks\"",

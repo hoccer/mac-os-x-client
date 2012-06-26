@@ -56,7 +56,6 @@
     
 }
 
-@property (assign) IBOutlet NSWindow *window;
 @property (nonatomic, retain)  NSDictionary *sendingDictionary;
 - (IBAction)startReceiving:(id)sender;
 
